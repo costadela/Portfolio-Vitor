@@ -34,7 +34,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0px 48px;
+    padding: 0 48px;
     background: color-mix(in srgb, #F7F6F2 88%, transparent);
     backdrop-filter: blur(10px);
     border-bottom: 1px solid rgba(20, 20, 15, 0.12);
@@ -246,7 +246,7 @@ h1.hero .accent {
     line-height: 1.85;
     color: #7A7A70;
     margin: 0 0 20px 0;
-    text-align: justify;
+    text-align: left;
 }
 
 .about-text strong {
@@ -526,4 +526,71 @@ footer {
 
 .voltar-topo:hover {
     color: #4F46E5;
+}
+
+/* =========================
+   RESPONSIVIDADE (MEDIA QUERIES)
+   ========================= */
+
+/* Tablets e Notebooks menores (até 1024px) */
+@media (max-width: 1024px) {
+    header {
+        padding: 0 24px;
+    }
+
+    main {
+        padding: 0 24px;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr; /* Empilha o texto e a barra lateral */
+        gap: 40px;
+    }
+
+    .project-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 colunas nos projetos */
+    }
+
+    .footer-rodape {
+        padding: 30px 24px;
+    }
+}
+
+/* Celulares (até 768px) */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 12px;
+        padding: 16px;
+        position: relative; /* Remove o sticky se preferir economizar espaço vertical */
+    }
+
+    .navegacao {
+        gap: 16px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    main {
+        padding: 0 16px;
+    }
+
+    h1.hero {
+        font-size: clamp(36px, 10vw, 48px);
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr; /* 1 coluna por linha no celular */
+    }
+
+    .contato-links a {
+        font-size: 20px; /* Reduz o tamanho dos links gigantes no mobile */
+    }
+
+    .footer-rodape {
+        flex-direction: column;
+        gap: 16px;
+        text-align: center;
+        padding: 24px 16px;
+    }
 }
