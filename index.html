@@ -24,9 +24,8 @@
     <!-- Fontes -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
     <link
-      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
 
@@ -44,43 +43,55 @@
       <p class="logo">Vitor Costadela</p>
 
       <nav class="navegacao">
-        <a href="#inicio">Início</a>
-        <a href="#sobre">Sobre</a>
-        <a href="#projetos">Projetos</a>
-        <a href="#contato">Contato</a>
+        <a href="#inicio" data-i18n="nav_inicio">Início</a>
+        <a href="#sobre" data-i18n="nav_sobre">Sobre</a>
+        <a href="#projetos" data-i18n="nav_projetos">Projetos</a>
+        <a href="#contato" data-i18n="nav_contato">Contato</a>
       </nav>
+
+      <div class="header-controls">
+        <button id="theme-toggle" type="button" aria-label="Alternar tema">
+          <span class="theme-text">DARK</span>
+        </button>
+
+        <button id="lang-toggle" type="button" aria-label="Alternar idioma">
+          <span class="lang-text">EN</span>
+        </button>
+      </div>
     </header>
+
     <!-- CONTEÚDO PRINCIPAL -->
 
     <main>
       <!-- HOME -->
 
       <section class="view" id="inicio">
-        <h1 class="hero">
-          Desenvolvedor
+        <h1 class="hero" data-i18n="hero_title">
+          Desenvolvedor <br />
           <span class="accent">Full Stack</span>
         </h1>
 
-        <p class="hero-lede">
+        <p class="hero-lede" data-i18n="hero_lede">
           Olá, sou o Vitor Costadela. Aqui você encontra projetos pessoais e
           acadêmicos em que venho trabalhando.
         </p>
 
         <div class="hero-cta">
-          <a href="#projetos" class="btn primary"> Ver projetos </a>
-
-          <a href="#contato" class="btn ghost"> Falar comigo </a>
+          <a href="#projetos" class="btn primary" data-i18n="btn_ver_projetos"
+            >Ver projetos</a
+          >
+          <a href="#contato" class="btn ghost" data-i18n="btn_falar_comigo"
+            >Falar comigo</a
+          >
         </div>
 
         <div class="home-social">
           <a href="https://wa.me/5532984386595" target="_blank" rel="noopener">
-            Whatsapp
-            <span class="arrow"> ↗ </span>
+            Whatsapp <span class="arrow"> ↗ </span>
           </a>
 
           <a href="https://github.com/costadela" target="_blank" rel="noopener">
-            GitHub
-            <span class="arrow"> ↗ </span>
+            GitHub <span class="arrow"> ↗ </span>
           </a>
 
           <a
@@ -88,8 +99,7 @@
             target="_blank"
             rel="noopener"
           >
-            LinkedIn
-            <span class="arrow"> ↗ </span>
+            LinkedIn <span class="arrow"> ↗ </span>
           </a>
         </div>
       </section>
@@ -97,13 +107,14 @@
       <!-- SOBRE -->
 
       <section class="view" id="sobre">
-        <p class="titulo-paragrafo">Sobre</p>
-
-        <h2 class="subtitulo">Por trás dos códigos</h2>
+        <p class="titulo-paragrafo" data-i18n="section_sobre_tag">Sobre</p>
+        <h2 class="subtitulo" data-i18n="section_sobre_title">
+          Por trás dos códigos
+        </h2>
 
         <div class="about-grid">
           <div class="about-text">
-            <p>
+            <p data-i18n="about_p1">
               Sou <strong>Vitor Costadela</strong>, atualmente estudante do
               curso de <strong>Sistemas de Informação</strong> na
               <strong>PUC Minas</strong>. Tenho paixão por tecnologia e por
@@ -111,49 +122,54 @@
               experimentado.
             </p>
 
-            <p>
+            <p data-i18n="about_p2">
               Meus estudos têm como objetivo construir uma base sólida como
               desenvolvedor, através de projetos pessoais e acadêmicos,
               colocando em prática aquilo que aprendo ao longo do caminho.
             </p>
 
-            <p>
+            <p data-i18n="about_p3">
               Ainda estou descobrindo quais caminhos quero seguir dentro da
               tecnologia, mas sei que quero continuar evoluindo e desenvolver
               aplicações capazes de solucionar problemas reais e transformar a
               vida das pessoas.
             </p>
 
-            <p>
+            <p data-i18n="about_p4">
               Para mim, cada projeto é uma oportunidade de aprender algo novo e
               dar mais um passo nessa direção.
             </p>
           </div>
 
           <div class="about-side">
-            <h4>Formação</h4>
+            <h4 data-i18n="edu_title">Formação</h4>
 
             <div class="edu-card">
               <div class="school">PUC Minas</div>
-
-              <div class="course">Sistemas de Informação</div>
+              <div class="course" data-i18n="edu_course">
+                Sistemas de Informação
+              </div>
             </div>
-            <h4>Tecnologias</h4>
 
-            <h5>JÁ UTILIZEI</h5>
+            <h4 data-i18n="skills_title">Tecnologias</h4>
+
+            <h5 data-i18n="skills_used">JÁ UTILIZEI</h5>
 
             <div class="skills">
               <span>HTML</span>
               <span>CSS</span>
               <span>JavaScript</span>
               <span>React</span>
+              <span>Firebase</span>
+              <span>Vite</span>
+              <span>React Router</span>
               <span>TypeScript</span>
               <span>Next.js</span>
               <span>Node.js</span>
               <span>Git · GitHub</span>
             </div>
 
-            <h5>ESTUDANDO</h5>
+            <h5 data-i18n="skills_learning">ESTUDANDO</h5>
 
             <div class="skills">
               <span>Java</span>
@@ -166,10 +182,13 @@
         </div>
       </section>
 
-      <!-- PROJETO -->
+      <!-- PROJETOS -->
+
       <section class="view" id="projetos">
-        <p class="titulo-paragrafo">Projetos</p>
-        <h2 class="subtitulo">Quando o conhecimento ganha forma</h2>
+        <p class="titulo-paragrafo" data-i18n="section_proj_tag">Projetos</p>
+        <h2 class="subtitulo" data-i18n="section_proj_title">
+          Quando o conhecimento ganha forma
+        </h2>
 
         <div class="project-grid">
           <!-- Projeto 1 -->
@@ -177,24 +196,23 @@
             <div class="project-preview">
               <img
                 src="/img/Landing Page Viagem .png"
-                alt="Preview do projeto"
+                alt="Preview do projeto Landing Page Viagem"
               />
             </div>
             <div class="project-body">
-              <h3>Landing Page Viagem 🌎</h3>
-              <p>
+              <h3 data-i18n="proj1_title">Landing Page Viagem 🌎</h3>
+              <p data-i18n="proj1_desc">
                 Meu primeiro projeto web, criado para apresentar um roteiro de
                 viagem de forma visual, organizada e responsiva.
               </p>
-              <div class="project-tags">
-                <span>HTML</span><span>CSS</span><span>JavaScript</span>
-              </div>
+              <div class="project-tags"><span>HTML</span><span>CSS</span></div>
               <div class="project-links-container">
                 <a
                   href="https://viagem.vitorcostadela.com"
                   class="project-link"
                   target="_blank"
                   rel="noopener"
+                  data-i18n="link_projeto"
                   >Projeto</a
                 >
                 <a
@@ -202,6 +220,7 @@
                   class="project-link"
                   target="_blank"
                   rel="noopener"
+                  data-i18n="link_codigo"
                   >Código</a
                 >
               </div>
@@ -211,20 +230,38 @@
           <!-- Projeto 2 -->
           <div class="project-card">
             <div class="project-preview">
-              <span>Em breve...</span>
+              <img
+                src="/img/AutoCertoJF.png"
+                alt="Preview do projeto Auto Certo JF"
+              />
             </div>
             <div class="project-body">
-              <h3>Titulo</h3>
-              <p>descrição projeto</p>
+              <h3>Auto Certo JF 🚗</h3>
+              <p data-i18n="proj2_desc">
+                Plataforma de gestão para concessionárias. Centraliza a
+                preparação de veículos, transferências e fluxo de compras em um
+                só lugar.
+              </p>
               <div class="project-tags">
-                <span>tecnologia</span>
+                <span>React (Router)</span><span>Firebase</span
+                ><span>Vite</span>
               </div>
               <div class="project-links-container">
-                <a href="#" class="project-link" target="_blank" rel="noopener"
-                  >Ver projeto</a
+                <a
+                  href="https://autocerto.vitorcostadela.com/"
+                  class="project-link"
+                  target="_blank"
+                  rel="noopener"
+                  data-i18n="link_projeto"
+                  >Projeto</a
                 >
-                <a href="#" class="project-link" target="_blank" rel="noopener"
-                  >Ver código</a
+                <a
+                  href="https://github.com/costadela/Auto-Certo.git"
+                  class="project-link"
+                  target="_blank"
+                  rel="noopener"
+                  data-i18n="link_codigo"
+                  >Código</a
                 >
               </div>
             </div>
@@ -233,125 +270,64 @@
           <!-- Projeto 3 -->
           <div class="project-card">
             <div class="project-preview">
-              <span>Em breve...</span>
+              <span data-i18n="coming_soon">Em breve...</span>
             </div>
             <div class="project-body">
-              <h3>Titulo</h3>
-              <p>descrição projeto</p>
+              <h3 data-i18n="coming_soon_title">Em breve</h3>
+              <p data-i18n="coming_soon_desc">
+                Novo projeto em desenvolvimento.
+              </p>
               <div class="project-tags">
-                <span>tecnologia</span>
+                <span>--</span>
               </div>
               <div class="project-links-container">
-                <a href="#" class="project-link" target="_blank" rel="noopener"
+                <a
+                  href="#"
+                  class="project-link"
+                  target="_blank"
+                  rel="noopener"
+                  data-i18n="link_ver_projeto"
                   >Ver projeto</a
                 >
-                <a href="#" class="project-link" target="_blank" rel="noopener"
+                <a
+                  href="#"
+                  class="project-link"
+                  target="_blank"
+                  rel="noopener"
+                  data-i18n="link_ver_codigo"
                   >Ver código</a
                 >
               </div>
             </div>
           </div>
-
-          <!-- Projeto 4 -->
-          <div class="project-card">
-            <div class="project-preview">
-              <span>Em breve...</span>
-            </div>
-            <div class="project-body">
-              <h3>Titulo</h3>
-              <p>descrição projeto</p>
-              <div class="project-tags">
-                <span>tecnologia</span>
-              </div>
-              <div class="project-links-container">
-                <a href="#" class="project-link" target="_blank" rel="noopener"
-                  >Ver projeto</a
-                >
-                <a href="#" class="project-link" target="_blank" rel="noopener"
-                  >Ver código</a
-                >
-              </div>
-            </div>
-          </div>
-
-          <!-- Projeto 5 -->
-          <div class="project-card">
-            <div class="project-preview">
-              <span>Em breve...</span>
-            </div>
-            <div class="project-body">
-              <h3>Titulo</h3>
-              <p>descrição projeto</p>
-              <div class="project-tags">
-                <span>tecnologia</span>
-              </div>
-              <div class="project-links-container">
-                <a href="#" class="project-link" target="_blank" rel="noopener"
-                  >Ver projeto</a
-                >
-                <a href="#" class="project-link" target="_blank" rel="noopener"
-                  >Ver código</a
-                >
-              </div>
-            </div>
-          </div>
-
-          <!-- Projeto 6 -->
-          <div class="project-card">
-            <div class="project-preview">
-              <span>Em breve...</span>
-            </div>
-            <div class="project-body">
-              <h3>Titulo</h3>
-              <p>descrição projeto</p>
-              <div class="project-tags">
-                <span>tecnologia</span>
-              </div>
-              <div class="project-links-container">
-                <a href="#" class="project-link" target="_blank" rel="noopener"
-                  >Ver projeto</a
-                >
-                <a href="#" class="project-link" target="_blank" rel="noopener"
-                  >Ver código</a
-                >
-              </div>
-            </div>
-          </div>
-        </div>
       </section>
 
       <!-- CONTATO -->
-       
+
       <section class="view" id="contato">
-        <p class="titulo-paragrafo">Contato</p>
+        <p class="titulo-paragrafo" data-i18n="section_contato_tag">Contato</p>
+        <h2 class="subtitulo" data-i18n="section_contato_title">
+          Vamos conversar?
+        </h2>
 
-        <h2 class="subtitulo">Vamos conversar?</h2>
-
-        <p class="paragrafo-contato">
+        <p class="paragrafo-contato" data-i18n="contato_desc">
           Aberto a oportunidades, novos projetos e boas conversas. <br />
           Entre em contato por um dos links abaixo.
         </p>
 
         <div class="contato-links">
           <a href="https://wa.me/5532984386595" target="_blank" rel="noopener">
-            Whatsapp
-
-            <span class="seta"> ↗ </span>
+            Whatsapp <span class="seta"> ↗ </span>
           </a>
           <a href="https://github.com/costadela" target="_blank" rel="noopener">
-            GitHub
-
-            <span class="seta"> ↗ </span>
+            GitHub <span class="seta"> ↗ </span>
           </a>
-
           <a
             href="https://www.linkedin.com/in/vitor-costadela-327213428"
             target="_blank"
             rel="noopener"
           >
-            LinkedIn
-
-            <span class="seta"> ↗ </span>
+            LinkedIn <span class="seta"> ↗ </span>
           </a>
         </div>
       </section>
@@ -363,10 +339,13 @@
       <div class="footer-rodape">
         <div class="footer-logo">
           <strong>Vitor Costadela</strong><br />
-          © 2026 · Todos os direitos reservados
+          © 2026 ·
+          <span data-i18n="footer_rights">Todos os direitos reservados</span>
         </div>
-        <a href="#inicio" class="voltar-topo">Topo ↑</a>
+        <a href="#inicio" class="voltar-topo" data-i18n="footer_top">Topo ↑</a>
       </div>
     </footer>
+
+    <script src="script.js"></script>
   </body>
 </html>
