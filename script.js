@@ -135,19 +135,27 @@ langToggleBtn.addEventListener('click', () => {
 /* CONTROLE DE DARK MODE */
 
 const themeToggleBtn = document.getElementById('theme-toggle');
-const themeText = themeToggleBtn.querySelector('.theme-text');
+const themeText = themeToggleBtn ? themeToggleBtn.querySelector('.theme-text') : null;
 
 function setTheme(theme) {
     document.documentElement.setAttribute('data-theme', theme);
     localStorage.setItem('theme', theme);
-    themeText.textContent = theme === 'dark' ? 'LIGHT' : 'DARK';
+    if (themeText) {
+        themeText.textContent = theme === 'dark' ? 'LIGHT' : 'DARK';
+    }
 }
 
-const savedTheme = localStorage.getItem('theme') || 'light';
+// Verifica tema salvo ou preferência do sistema/navegador
+const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+const savedTheme = localStorage.getItem('theme') || (prefersDark ? 'dark' : 'light');
+
+
 setTheme(savedTheme);
 
-themeToggleBtn.addEventListener('click', () => {
-    const currentTheme = document.documentElement.getAttribute('data-theme');
-    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-    setTheme(newTheme);
-});
+if (themeToggleBtn) {
+    themeToggleBtn.addEventListener('click', () => {
+        const currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
+        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        setTheme(newTheme);
+    });
+}
